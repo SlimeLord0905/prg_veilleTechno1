@@ -8,15 +8,15 @@ const GRID_HEIGHT: usize = 200;
 const CELL_SIZE: usize = 2;
 const WINDOW_WIDTH: usize = GRID_WIDTH * CELL_SIZE;
 const WINDOW_HEIGHT: usize = GRID_HEIGHT * CELL_SIZE;
-const WINDOW_TITLE: &str = "Conway's Game of Life";
-const FRAME_DELAY_MS: u64 = 0; // Delay between each frame (50ms in this case)
+const WINDOW_TITLE: &str = "SmoothLife";
+const FRAME_DELAY_MS: u64 = 50; // Delay between each frame (50ms in this case)
 
 fn main() {
     let mut grid = create_grid();
 
-    // Set initial state with random alive cells
+    // Set initial state with fewer random alive cells
     let mut rng = rand::thread_rng();
-    for _ in 0..(GRID_WIDTH * GRID_HEIGHT / 10) {
+    for _ in 0..(GRID_WIDTH * GRID_HEIGHT / 20) {
         let row = rng.gen_range(0..GRID_HEIGHT);
         let col = rng.gen_range(0..GRID_WIDTH);
         grid[row][col] = true;
@@ -42,7 +42,7 @@ fn main() {
     while window.is_open() && !window.is_key_down(Key::Escape) {
         if window.is_key_pressed(Key::R, KeyRepeat::No) {
             grid = create_grid();
-            for _ in 0..(GRID_WIDTH * GRID_HEIGHT / 10) {
+            for _ in 0..(GRID_WIDTH * GRID_HEIGHT / 20) {
                 let row = rng.gen_range(0..GRID_HEIGHT);
                 let col = rng.gen_range(0..GRID_WIDTH);
                 grid[row][col] = true;
@@ -93,7 +93,8 @@ fn update_grid(grid: &mut Vec<Vec<bool>>) {
             let alive_neighbors = count_alive_neighbors(&grid, i, j);
 
             new_grid[i][j] = match (cell, alive_neighbors) {
-                (true, 2) | (true, 3) | (false, 3) => true,
+                (true, count) if count >= 2 && count <= 4 => true,
+                (false, count) if count >= 3 && count <= 6 => true,
                 _ => false,
             };
         }
