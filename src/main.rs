@@ -3,8 +3,8 @@ use rand::Rng;
 use std::thread;
 use std::time::Duration;
 
-const GRID_WIDTH: usize = 500;
-const GRID_HEIGHT: usize = 175;
+const GRID_WIDTH: usize = 375;
+const GRID_HEIGHT: usize = 200;
 const CELL_SIZE: usize = 2;
 const WINDOW_WIDTH: usize = GRID_WIDTH * CELL_SIZE;
 const WINDOW_HEIGHT: usize = GRID_HEIGHT * CELL_SIZE;
