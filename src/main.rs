@@ -8,13 +8,12 @@ const GRID_HEIGHT: usize = 200;
 const CELL_SIZE: usize = 2;
 const WINDOW_WIDTH: usize = GRID_WIDTH * CELL_SIZE;
 const WINDOW_HEIGHT: usize = GRID_HEIGHT * CELL_SIZE;
-const WINDOW_TITLE: &str = "Conway's Game of Life";
-const FRAME_DELAY_MS: u64 = 0; // Delay between each frame (50ms in this case)
+const WINDOW_TITLE: &str = "Smooth Life Cellular Automaton";
+const FRAME_DELAY_MS: u64 = 50;
 
 fn main() {
     let mut grid = create_grid();
 
-    // Set initial state with random alive cells
     let mut rng = rand::thread_rng();
     for _ in 0..(GRID_WIDTH * GRID_HEIGHT / 10) {
         let row = rng.gen_range(0..GRID_HEIGHT);
@@ -70,7 +69,8 @@ fn create_grid() -> Vec<Vec<bool>> {
 fn print_grid(buffer: &mut Vec<u32>, grid: &Vec<Vec<bool>>) {
     for (i, row) in grid.iter().enumerate() {
         for (j, &cell) in row.iter().enumerate() {
-            let color = if cell { 0xFFFFFF } else { 0x000000 };
+            let alive_neighbors = count_alive_neighbors(&grid, i, j);
+            let color_value = (alive_neighbors as u32) * (255 / 9); 
 
             for x in 0..CELL_SIZE {
                 for y in 0..CELL_SIZE {
@@ -78,7 +78,7 @@ fn print_grid(buffer: &mut Vec<u32>, grid: &Vec<Vec<bool>>) {
                     let pixel_y = i * CELL_SIZE + y;
                     let index = pixel_y * WINDOW_WIDTH + pixel_x;
 
-                    buffer[index] = color;
+                    buffer[index] = (color_value << 16) | (color_value << 8) | color_value;
                 }
             }
         }
