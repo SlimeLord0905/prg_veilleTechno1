@@ -64,9 +64,8 @@ Le Rust est un langage de programmation dit "de niveau système", ce qui signifi
 
 ### **Méthodologie**
 <br/>
-La recherche a commencé par une expérimentation de Rust afin d'avoir une meilleure idée de ce qu'est ce langage et de la disponibilité des informations nécessaires pour l'apprendre. Un simple jeu de la vie a donc été réalisé en Rust qui s'affiche dans une fenêtre et peut être réinitialisé en appuyant sur la touche R dans le but d'apprendre les bases du rust pour mieux comprendre les avis récupérer sur internet.
-<a href="https://gyazo.com/b3b370f29c576c8916c9e673aac591af"><img src="https://i.gyazo.com/b3b370f29c576c8916c9e673aac591af.gif" alt="Image from Gyazo" width="1600"/></a>
- Ensuite, une recherche en ligne a été effectuée. Pour mener cette recherche, de nombreux articles ont été lus et les opinions des auteurs ont été compilées avant d'être classées afin de dégager les idées générales de ce que les programmeurs aiment et n'aiment pas.
+La recherche a commencé par une expérimentation de Rust afin d'avoir une meilleure idée de ce qu'est ce langage et de la disponibilité des informations nécessaires pour l'apprendre. Un simple jeu de la vie a donc été réalisé en Rust qui s'affiche dans une fenêtre. Pour pousser les tests plus loin, une variation du jeu de la vie appelée SmoothLife a été développée.
+<a href="https://gyazo.com/64f1b0a48b4b6f31e61c18d6feddde47"><img src="https://i.gyazo.com/64f1b0a48b4b6f31e61c18d6feddde47.gif" alt="Image from Gyazo" width="1280"/></a> Ensuite, une recherche en ligne a été effectuée. Pour mener cette recherche, de nombreux articles ont été lus et les opinions des auteurs ont été compilées avant d'être classées afin de dégager les idées générales de ce que les programmeurs aiment et n'aiment pas.
 <br/><br/>
 
 ###  **Les points positifs**
