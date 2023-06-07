@@ -9,7 +9,7 @@ const CELL_SIZE: usize = 2;
 const WINDOW_WIDTH: usize = GRID_WIDTH * CELL_SIZE;
 const WINDOW_HEIGHT: usize = GRID_HEIGHT * CELL_SIZE;
 const WINDOW_TITLE: &str = "SmoothLife";
-const FRAME_DELAY_MS: u64 = 50; // Delay between each frame (50ms in this case)
+const FRAME_DELAY_MS: u64 = 0; // Delay between each frame (50ms in this case)
 
 fn main() {
     let mut grid = create_grid();
