@@ -49,7 +49,8 @@
 
 
 ## **Introduction**
-<br/><br/>
+<br/>
+L'informatique est un domaine en constante évolution, avec des changements rapides tant au niveau des capacités des ordinateurs que des langages utilisés pour les programmer. Récemment, un nouveau langage a connu une montée fulgurante en popularité : Rust. Ce texte vise à recueillir les opinions positives et négatives sur Rust afin de comprendre les raisons de sa popularité croissante.
 
 <img src=https://www.rustacean.net/assets/cuddlyferris.svg style="width:70%">
 
@@ -66,7 +67,7 @@ Le Rust est un langage de programmation dit "de niveau système", ce qui signifi
 <br/>
 La recherche a commencé par une expérimentation de Rust afin d'avoir une meilleure idée de ce qu'est ce langage et de la disponibilité des informations nécessaires pour l'apprendre. Un simple jeu de la vie a donc été réalisé en Rust qui s'affiche dans une fenêtre et peut être réinitialisé en appuyant sur la touche R dans le but d'apprendre les bases du rust pour mieux comprendre les avis récupérer sur internet.
 <a href="https://gyazo.com/b3b370f29c576c8916c9e673aac591af"><img src="https://i.gyazo.com/b3b370f29c576c8916c9e673aac591af.gif" alt="Image from Gyazo" width="1600"/></a>
- Ensuite, une recherche en ligne a été effectuée. Pour mener cette recherche, de nombreux articles ont été lus et les opinions des auteurs ont été compilées avant d'être classées afin de dégager les idées générales de ce que les programmeurs aiment et n'aiment pas.
+Je souhaitais poursuivre l'exercice en créant une variante plus complexe appelée "smoothLife", mais malheureusement, cela n'a pas abouti. Ensuite, une recherche en ligne a été effectuée. Pour mener cette recherche, de nombreux articles ont été lus et les opinions des auteurs ont été compilées avant d'être classées afin de dégager les idées générales de ce que les programmeurs aiment et n'aiment pas.
 <br/><br/>
 
 ###  **Les points positifs**
@@ -114,7 +115,28 @@ Le Rust présente de nombreux avantages par rapport aux langages similaires, tel
 
 ## **Conclusion**
 <br/><br/>
-
+Le Rust est un langage qui est plutôt récent, mais il a gagné en popularité grâce à sa philosophie d'offrir de nombreux conforts modernes sans compromettre les performances. Grâce à sa grande résistance aux bugs, ses performances et ses avantages en programmation multithread, des problèmes tels que la complexité du langage et l'absence d'orientation objet n'ont pas découragé les programmeurs qui restent intéressés par celui-ci. Peut-être que, dans un avenir plus ou moins proche, la popularité du Rust diminuera, mais pour le moment, il semble être là pour rester avec sa communauté de supporters qui continuent de le faire progresser.
 
 ## **Médiagraphie**
 <br/><br/>
+The Rust Programming Language. (s.d.). Récupéré le 7 juin 2023, de https://www.rust-lang.org/
+
+Goh, S. (2020, 20 janvier). What is Rust and why is it so popular? - Stack Overflow Blog. Stack Overflow Blog. https://stackoverflow.blog/2020/01/20/what-is-rust-and-why-is-it-so-popular/
+
+What Is Rust and How It Works - An Overview and Its Use Cases. (s.d.). DevOpsSchool.com. Récupéré le 7 juin 2023, de https://www.devopsschool.com/blog/what-is-rust-and-how-it-works-an-overview-and-its-use-cases/
+
+Mittal, C. (2023, 4 février). 10 Best Use Cases of Rust Programming Language in 2023. DEV Community. https://dev.to/chetanmittaldev/10-best-use-cases-of-rust-programming-language-in-2023-20jk
+
+Clicks, T. (s.d.). 9 Advantages of Programming in Rust. DEV Community. Récupéré le 7 juin 2023, de https://dev.to/timclicks/9-advantages-of-programming-in-rust-22m0
+
+Stutee. (s.d.). Rust Langage de programmation : les avantages et les inconvénients. IONOS Digital Guide. Récupéré le 7 juin 2023, de https://www.ionos.fr/digitalguide/sites-internet/developpement-web/rust-langage-de-programmation/
+
+Carr, J. (2021, 19 janvier). Rust programming: Benefits, frameworks, and more. Simple Programmer. https://simpleprogrammer.com/rust-programming-benefits/
+
+Fink, R. (2021, 29 décembre). 7 reasons to love the Rust language — and 7 reasons not to. InfoWorld. https://www.infoworld.com/article/3675391/7-reasons-to-love-the-rust-language-and-7-reasons-not-to.html
+
+Rust Programming Language. (s.d.). Lefttronic. Récupéré le 7 juin 2023, de https://leftronic.com/blog/rust-programming-language/
+
+Baaz, K. (2023, 17 avril). Why is Rust the Most Popular Programming Language? Turing. https://www.turing.com/blog/rust-is-the-most-popular-programming-language/
+
+Rust Guide: How to Learn Rust in 2023. (s.d.). Serokell. Récupéré le 7 juin 2023, de https://serokell.io/blog/rust-guide
