@@ -114,11 +114,11 @@ Le Rust ne peut en aucun cas être considéré comme un langage pour débutants.
 Le Rust présente de nombreux avantages par rapport aux langages similaires, tels que les systèmes intégrés dans le compilateur qui évitent de nombreuses erreurs imprévues, ses excellentes performances et la grande stabilité de ses processus parallèles. Cela le rend très populaire auprès des programmeurs qui ont besoin d'un langage de niveau système. Même s'il parvient à éviter de nombreux problèmes de ses prédécesseurs, le Rust reste un langage complexe et moins adapté à la programmation orientée objet. Malgré ses imperfections, le Rust offre suffisamment d'avantages par rapport à ses prédécesseurs pour justifier sa montée en popularité.
 
 ## **Conclusion**
-<br/><br/>
+<br/>
 Le Rust est un langage qui est plutôt récent, mais il a gagné en popularité grâce à sa philosophie d'offrir de nombreux conforts modernes sans compromettre les performances. Grâce à sa grande résistance aux bugs, ses performances et ses avantages en programmation multithread, des problèmes tels que la complexité du langage et l'absence d'orientation objet n'ont pas découragé les programmeurs qui restent intéressés par celui-ci. Peut-être que, dans un avenir plus ou moins proche, la popularité du Rust diminuera, mais pour le moment, il semble être là pour rester avec sa communauté de supporters qui continuent de le faire progresser.
 
 ## **Médiagraphie**
-<br/><br/>
+<br/>
 The Rust Programming Language. (s.d.). Récupéré le 7 juin 2023, de https://www.rust-lang.org/
 
 Goh, S. (2020, 20 janvier). What is Rust and why is it so popular? - Stack Overflow Blog. Stack Overflow Blog. https://stackoverflow.blog/2020/01/20/what-is-rust-and-why-is-it-so-popular/
