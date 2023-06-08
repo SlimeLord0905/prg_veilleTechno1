@@ -4,13 +4,13 @@ use rayon::prelude::*;
 use std::thread;
 use std::time::Duration;
 
-const GRID_WIDTH: usize = 750;
-const GRID_HEIGHT: usize = 400;
-const CELL_SIZE: usize = 1;
-const WINDOW_WIDTH: usize = GRID_WIDTH * CELL_SIZE;
-const WINDOW_HEIGHT: usize = GRID_HEIGHT * CELL_SIZE;
-const WINDOW_TITLE: &str = "Smooth Life Cellular Automaton";
-const FRAME_DELAY_MS: u64 = 0;
+const GRID_WIDTH: usize = 750; //nombre de cells de x
+const GRID_HEIGHT: usize = 400; //nombre de cells y
+const CELL_SIZE: usize = 1; //nombre de pixel occupé par une cellule
+const WINDOW_WIDTH: usize = GRID_WIDTH * CELL_SIZE; //largeur de la grid
+const WINDOW_HEIGHT: usize = GRID_HEIGHT * CELL_SIZE; //hauteur de la grid
+const WINDOW_TITLE: &str = "Smooth Life Cellular Automaton Par Mathieu Mercier";
+const FRAME_DELAY_MS: u64 = 50; //possible délais a appliquer entre chaque cycle default 50ms augmenter le frame delay réduit la charge sur le cpu
 
 fn main() {
     let mut grid = create_grid();
@@ -53,10 +53,12 @@ fn main() {
     }
 }
 
+//Crée la grid un vecteur deux dimmension c'est a dire une array a taille non fini qui contient d'autre array a taille non fini
 fn create_grid() -> Vec<Vec<f64>> {
     vec![vec![0.0; GRID_WIDTH]; GRID_HEIGHT]
 }
 
+//Ajoute des cellules en vie aléatoire à la création de la grid
 fn randomize_grid(grid: &mut Vec<Vec<f64>>, rng: &mut impl Rng) {
     for i in 0..GRID_HEIGHT {
         for j in 0..GRID_WIDTH {
@@ -64,11 +66,11 @@ fn randomize_grid(grid: &mut Vec<Vec<f64>>, rng: &mut impl Rng) {
         }
     }
 }
-
+//Affiche le contenue du buffer de la windows pixel par pixel
 fn print_grid(buffer: &mut Vec<u32>, grid: &Vec<Vec<f64>>) {
     for (i, row) in grid.iter().enumerate() {
         for (j, &value) in row.iter().enumerate() {
-            let color_value = (value * 255.0) as u32; // Map cell value to grayscale value
+            let color_value = (value * 255.0) as u32; 
 
             let pixel_x_start = j * CELL_SIZE;
             let pixel_x_end = pixel_x_start + CELL_SIZE;
@@ -85,7 +87,7 @@ fn print_grid(buffer: &mut Vec<u32>, grid: &Vec<Vec<f64>>) {
         }
     }
 }
-
+//Update le buffer de la window avec la valeur retourner par smooth_life_neighbors pour toutes les cellules
 fn update_grid(grid: &mut Vec<Vec<f64>>) {
     let mut new_grid = create_grid();
 
@@ -94,16 +96,16 @@ fn update_grid(grid: &mut Vec<Vec<f64>>) {
         .enumerate()
         .for_each(|(i, new_row)| {
             for j in 0..GRID_WIDTH {
-                let value = grid[i][j];
                 let new_value = smooth_life_neighbors(&grid, i, j);
 
-                new_row[j] = new_value.max(0.0).min(1.0); // Ensure value is within range [0, 1]
+                new_row[j] = new_value.max(0.0).min(1.0); 
             }
         });
 
     *grid = new_grid;
 }
 
+//Compte le nombre de voisin dans le radius fait les calculs du model smoothLife puis retourne la valeur de la cellule
 fn smooth_life_neighbors(grid: &Vec<Vec<f64>>, row: usize, col: usize) -> f64 {
     let mut inner_count = 0;
     let mut outer_count = 0;
